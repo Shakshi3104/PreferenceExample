@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         Text("Preferences Example!")
             .padding(50)
+            .frame(minWidth: 400, minHeight: 450)
     }
 }
 
