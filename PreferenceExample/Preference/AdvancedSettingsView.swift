@@ -12,6 +12,7 @@ struct AdvancedSettingsView: View {
     @AppStorage("isShowDevelop") var isShowDevelop = false
     @AppStorage("isSmallestFontSize") var isSmallestFontSize = false
     @AppStorage("smallestFontSizeSelection") var smallestFontSizeSelection = 0
+    @AppStorage("isHighlightTab") var isHighlightTab = false
     
     private let contentWidth: Double = 450
     
@@ -42,7 +43,7 @@ struct AdvancedSettingsView: View {
                 }.padding(.vertical, 5)
                 
                 Preferences.Section {
-                    Toggle(isOn: $isShowDevelop) {
+                    Toggle(isOn: $isHighlightTab) {
                         Text("Press Tab to highlight each item on a webpage")
                     }
                 } content: {
