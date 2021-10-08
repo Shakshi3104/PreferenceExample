@@ -2,8 +2,6 @@
 
 Example of creating a preferences window for macOS app with SwiftUI
 
-
-
 <p aline="center">
   <img src="materials/preferences-general.png" width=512> 
 </p>
@@ -11,10 +9,6 @@ Example of creating a preferences window for macOS app with SwiftUI
 <p aline="center">
   <img src="materials/preferences-advanced.png" width=512>
 </p>
-
-
-
-
 
 ## Dependencies
 - Xcode 13+
