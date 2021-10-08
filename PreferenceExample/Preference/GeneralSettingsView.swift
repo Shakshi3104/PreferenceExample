@@ -10,8 +10,11 @@ import Preferences
 
 struct GeneralSettingsView: View {
     
-    @State private var appIconSelection = 0
-    private let contentWidth = 350.0
+    @AppStorage("appIconSelection") var appIconSelection = 0
+    @AppStorage("appearanceSelection") var appearanceSelection = 0
+    @AppStorage("noteSize") var noteSize = 0.0
+    @AppStorage("showFirstNameSelection") var showFirstNameSelection = 0
+    private let contentWidth: Double = 450
     
     var body: some View {
         Preferences.Container(contentWidth: contentWidth) {
@@ -20,6 +23,38 @@ struct GeneralSettingsView: View {
                     Picker("", selection: $appIconSelection) {
                         Text("Default").tag(0)
                     }
+                    .labelsHidden()
+                    .frame(width: 120)
+                }
+            }
+            
+            Preferences.Section(title: "Appearance:") {
+                Preferences.Section(title: "") {
+                    Picker("", selection: $appearanceSelection) {
+                        Text("System").tag(0)
+                        Divider()
+                        Text("Light").tag(1)
+                        Text("Dark").tag(2)
+                    }
+                    .labelsHidden()
+                    .frame(width: 120)
+                }
+            }
+            
+            Preferences.Section(title: "Note size:") {
+                Preferences.Section(title: "") {
+                    Slider(value: $noteSize, in: 0...5, step: 1)
+                        .frame(width: 320)
+                }
+            }
+            
+            Preferences.Section(title: "Show First Name:") {
+                Preferences.Section(title: "") {
+                    Picker("", selection: $showFirstNameSelection) {
+                        Text("Before last name").tag(0)
+                        Text("Following last name").tag(1)
+                    }
+                    .pickerStyle(RadioGroupPickerStyle())
                 }
             }
         }

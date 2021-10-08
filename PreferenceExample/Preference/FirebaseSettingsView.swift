@@ -9,10 +9,10 @@ import SwiftUI
 import Preferences
 
 struct FirebaseSettingsView: View {
-    @State private var collectionName = ""
+    @AppStorage("collectionName") var collectionName = ""
     private let defaultCollectionName = "latency_v3"
     
-    private let contentWidth = 350.0
+    private let contentWidth: Double = 450
     
     var body: some View {
         Preferences.Container(contentWidth: contentWidth) {
