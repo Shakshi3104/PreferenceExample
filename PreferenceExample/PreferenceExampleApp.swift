@@ -26,12 +26,20 @@ struct PreferenceExampleApp: App {
     
     let FirebasePreferenceViewController: () -> PreferencePane = {
         let paneView = Preferences.Pane(
-            identifier: .advanced,
+            identifier: .firebase,
             title: "Firebase",
             toolbarIcon: NSImage(systemSymbolName: "externaldrive.connected.to.line.below",
                                  accessibilityDescription: "Firebase management")!
         ) {
             FirebaseSettingsView()
+        }
+        
+        return Preferences.PaneHostingController(pane: paneView)
+    }
+    
+    let AdvancedPreferenceViewController: () -> PreferencePane = {
+        let paneView = Preferences.Pane(identifier: .advanced, title: "Advanced", toolbarIcon: NSImage(systemSymbolName: "gearshape.2", accessibilityDescription: "Advanced preferences")!) {
+            AdvancedSettingsView()
         }
         
         return Preferences.PaneHostingController(pane: paneView)
@@ -46,7 +54,8 @@ struct PreferenceExampleApp: App {
                     PreferencesWindowController(
                         preferencePanes: [
                             GeneralPreferenceViewController(),
-                            FirebasePreferenceViewController()
+                            FirebasePreferenceViewController(),
+                            AdvancedPreferenceViewController()
                         ],
                         style: .toolbarItems
                     ).show()
