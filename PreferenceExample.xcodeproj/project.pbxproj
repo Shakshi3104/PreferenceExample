@@ -29,6 +29,10 @@
 		CE559872270EB30D00BAB3A9 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		CE559875270EB76700BAB3A9 /* FirebaseSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSettingsView.swift; sourceTree = "<group>"; };
 		CEA3B85B2710062300FB66C5 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
+		CEA3B85D27100FBB00FB66C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CEA3B85F271011AA00FB66C5 /* preferences-advanced.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences-advanced.png"; sourceTree = "<group>"; };
+		CEA3B860271011AA00FB66C5 /* preferences-firebase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences-firebase.png"; sourceTree = "<group>"; };
+		CEA3B861271011AA00FB66C5 /* preferences-general.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences-general.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 		CE559850270EB01D00BAB3A9 = {
 			isa = PBXGroup;
 			children = (
+				CEA3B85E2710114000FB66C5 /* materials */,
+				CEA3B85D27100FBB00FB66C5 /* README.md */,
 				CE55985B270EB01D00BAB3A9 /* PreferenceExample */,
 				CE55985A270EB01D00BAB3A9 /* Products */,
 			);
@@ -89,6 +95,16 @@
 				CEA3B85B2710062300FB66C5 /* AdvancedSettingsView.swift */,
 			);
 			path = Preference;
+			sourceTree = "<group>";
+		};
+		CEA3B85E2710114000FB66C5 /* materials */ = {
+			isa = PBXGroup;
+			children = (
+				CEA3B85F271011AA00FB66C5 /* preferences-advanced.png */,
+				CEA3B860271011AA00FB66C5 /* preferences-firebase.png */,
+				CEA3B861271011AA00FB66C5 /* preferences-general.png */,
+			);
+			path = materials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
